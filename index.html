@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elephant Facts</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .facts-display {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button id="show-fact-btn">Show Fact</button>
+        <div id="facts-display" class="facts-display"></div>
+    </div>
+    <script>
+        const elephantFacts = [
+            "Elephants are the largest land animals on Earth.",
+            "They can weigh up to 12,000 pounds (5,443 kg) and can be up to 13 feet (4 meters) tall.",
+            "Elephants have a highly developed brain and are known for their intelligence.",
+            "They have a unique social structure and live in family groups led by a matriarch.",
+            "Elephants communicate using a variety of sounds, including trumpets, rumbles, and even infrasound.",
+            "Their trunks are incredibly versatile and can be used for drinking, eating, and even social interactions.",
+            "Elephants can live for 60 to 70 years in the wild.",
+            "They are known to exhibit behaviors such as mourning, playfulness, and problem-solving.",
+            "Elephants have a strong sense of smell and can detect water sources from miles away.",
+            "There are three species of elephants: African bush elephants, African forest elephants, and Asian elephants."
+        ];
+
+        document.getElementById('show-fact-btn').addEventListener('click', function() {
+            const factsDisplay = document.getElementById('facts-display');
+            factsDisplay.innerHTML = elephantFacts.join('<br>');
+        });
+    </script>
+</body>
+</html>
